@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linedraw"
+version = "0.1.0"
+description = "Convert images to vectorized line drawings for plotters."
+authors = [
+    { name = "Andee Collard", email = "your-email@example.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://github.com/andeecollard/linedraw"
+
+[project.dependencies]
+pillow = "^8.0.0"
+numpy = "^1.19.0"
+opencv-python = { version = "^4.5.0", optional = true }
+
+[project.optional-dependencies]
+opencv = ["opencv-python"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
