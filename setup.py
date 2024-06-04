@@ -4,19 +4,20 @@ setup(
     name="linedraw",
     version="0.1.0",
     description="Convert images to line drawings",
-    author="Author Name",
-    author_package="author@example.com",
-    url="https://github.com/rahulps1000/linedraw",
-    packages=find_packages(),
+    long_description="A tool to convert images into line drawings using Python, leveraging libraries such as Pillow and OpenCV.",
+    author="Your Name",
+    author_email="your.email@example.com",
+    url="https://github.com/andeecollard/linedraw",
+    packages=find_packages(),  # Automatically find and include all packages
     include_package_data=True,
     install_requires=[
-        'Pillow',   # Pillow for image manipulation
-        'numpy',    # NumPy for numerical operations
-        'opencv-python'  # OpenCV for additional image processing
+        'Pillow',  # Image handling
+        'numpy',  # Numerical operations
+        'opencv-python'  # Image processing
     ],
     entry_points={
         'console_scripts': [
-            'linedraw=linedraw.main:main',  # Adjust the path and function name as necessary
+            'linedraw=linedraw.main:main',  # Adjust this to your module and function
         ],
     },
     classifiers=[
